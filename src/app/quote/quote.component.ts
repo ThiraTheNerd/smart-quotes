@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit, HostBinding, Input } from '@angular/core';
 import { from } from 'rxjs';
 import {Quote} from '../quote';
 
@@ -9,16 +9,10 @@ import {Quote} from '../quote';
 })
 export class QuoteComponent implements OnInit {
   // @HostBinding('attr.class') cssClass = "row";
-  quote: Quote;
 
-  constructor() {
-    this.quote = new Quote(
-      'When life gives you lemons, make lemonade',
-      'Jeremy WIlliams',
-      'Mark',
-      10
-    );
-   }
+  @Input() quote: Quote;
+
+  constructor() {}
 
   voteUp(): boolean {
     this.quote.voteUp();
