@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { QuoteComponent } from './quote/quote.component';
+import { PipesPipe } from './pipes.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    QuoteComponent
+    QuoteComponent,
+    PipesPipe
   ],
   imports: [
     BrowserModule
