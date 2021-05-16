@@ -35,7 +35,7 @@
   </div>
   <button (click)="addQuote(newname, newquote, newauthor)" type="submit" class="btn btn-primary" id="submit">Submit</button>
 </form>
-<div>
+<div class="quotes">
   <app-quote *ngFor = "let quote of quotes" [quote] = "quote">
 
   </app-quote>
