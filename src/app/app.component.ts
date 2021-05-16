@@ -14,12 +14,7 @@ export class AppComponent {
   quotes: Quote[]; 
 
   constructor(){
-    this.quotes = [
-      // new Quote('Teach a man how to fish and you feed him for life','Jacob Stephens', 'Julie', 10),
-      // new Quote('A bird in hand is worth two in the bush', 'Jacob Stephens', 'Julie', 100),
-      // new Quote('What doesn\'t kill you makes you stronger', 'Jacob Stephens', 'Julie', 50),
-      // new Quote('Usiuwache mbachao kwa msala upitao', 'Jacob Stephens', 'Julie', 1),
-    ];
+    this.quotes = [];
   }
 
   addQuote(name: HTMLInputElement, quote: HTMLInputElement, author: HTMLInputElement): boolean{
@@ -36,5 +31,9 @@ export class AppComponent {
     author.value= "";
 
     return false;
+  }
+
+  sortedQuotes(): Quote[] {
+    return this.quotes.sort((a:Quote, b:Quote) => b.votes - a.votes);
   }
 }

@@ -36,7 +36,7 @@
   <button (click)="addQuote(newname, newquote, newauthor)" type="submit" class="btn btn-primary" id="submit">Submit</button>
 </form>
 <div class="quotes">
-  <app-quote *ngFor = "let quote of quotes" [quote] = "quote">
+  <app-quote *ngFor = "let quote of sortedQuotes()" [quote] = "quote">
 
   </app-quote>
 </div>
