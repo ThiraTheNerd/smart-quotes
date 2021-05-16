@@ -20,14 +20,14 @@ export class QuoteComponent implements OnInit {
     );
    }
 
-  // voteUp(): boolean{
-  //   this.votes += 1;
-  //   return false;
-  // }
-  // voteDown(): boolean{
-  //   this.votes -= 1;
-  //   return false;
-  // }
+  voteUp(): boolean {
+    this.quote.voteUp();
+    return false;
+  }
+  voteDown(): boolean {
+    this.quote.voteDown();
+    return false;
+  }
 
   ngOnInit() {
   }

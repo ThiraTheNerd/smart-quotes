@@ -1,8 +1,8 @@
 export class Quote {
   quotename: string;
   author: string;
-  votes: number;
   name: string;
+  votes: number;
 
 
   constructor(quotename: string, author:string, name:string, votes?: number){
