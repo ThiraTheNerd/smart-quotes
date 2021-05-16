@@ -1,7 +1,8 @@
 // import { Quote } from '@angular/compiler';
 import { Component } from '@angular/core';
+import { title } from 'process';
 import { from } from 'rxjs';
-import {Quote} from './quote'
+import {Quote} from './quote';
 
 @Component({
   selector: 'app-root',
@@ -14,10 +15,10 @@ export class AppComponent {
 
   constructor(){
     this.quotes = [
-      new Quote('Teach a man how to fish and you feed him for life','Jacob Stephens', 'Julie', 10),
-      new Quote('A bird in hand is worth two in the bush', 'Jacob Stephens', 'Julie', 100),
-      new Quote('What doesn\'t kill you makes you stronger', 'Jacob Stephens', 'Julie', 50),
-      new Quote('Usiuwache mbachao kwa msala upitao', 'Jacob Stephens', 'Julie', 1),
+      // new Quote('Teach a man how to fish and you feed him for life','Jacob Stephens', 'Julie', 10),
+      // new Quote('A bird in hand is worth two in the bush', 'Jacob Stephens', 'Julie', 100),
+      // new Quote('What doesn\'t kill you makes you stronger', 'Jacob Stephens', 'Julie', 50),
+      // new Quote('Usiuwache mbachao kwa msala upitao', 'Jacob Stephens', 'Julie', 1),
     ];
   }
 
@@ -25,7 +26,15 @@ export class AppComponent {
     console.log(`Adding :
     ${name.value}, 
     ${quote.value},
-    ${author.value}`);
+    ${author.value},
+    ${Quote}`);
+    
+    this.quotes.push(new Quote(quote.value, author.value, name.value));
+
+    name.value = "";
+    quote.value= "";
+    author.value= "";
+
     return false;
   }
 }
