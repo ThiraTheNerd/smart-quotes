@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'smart-quote';
+  addQuote(name: HTMLInputElement, quote: HTMLInputElement, author: HTMLInputElement): boolean{
+    console.log(`Adding :
+    ${name.value}, 
+    ${quote.value},
+    ${author.value}`);
+    return false;
+  }
 }
