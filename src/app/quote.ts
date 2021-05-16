@@ -3,6 +3,7 @@ export class Quote {
   author: string;
   name: string;
   votes: number;
+  date: Date;
 
 
   constructor(quotename: string, author:string, name:string, votes?: number){
@@ -10,6 +11,7 @@ export class Quote {
     this.author= author;
     this.name = name;
     this.votes = votes || 0;
+    this.date = new Date;
   }
 
   voteUp(): void {
