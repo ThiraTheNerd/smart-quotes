@@ -6,6 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class DateAgoPipe implements PipeTransform {
 
   transform(value: any, args?: any): any {
+    //calculates the seconds since the post was added.
     if (value){
       const seconds = Math.floor((+new Date() - +new Date(value))/1000);
       if (seconds<29)
