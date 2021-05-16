@@ -1,4 +1,6 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
+import { from } from 'rxjs';
+import {Quote} from '../quote';
 
 @Component({
   selector: 'app-quote',
@@ -7,26 +9,25 @@ import { Component, OnInit, HostBinding } from '@angular/core';
 })
 export class QuoteComponent implements OnInit {
   // @HostBinding('attr.class') cssClass = "row";
-  votes: number;
-  quote: string;
-  author: string;
-  name : string;
+  quote: Quote;
 
   constructor() {
-    this.quote = `This is a wider card with supporting text below as a natural lead-in to it.`;
-    this.author = 'Jeremy Williams';
-    this.name = 'Mercy'
-    this.votes = 0
+    this.quote = new Quote(
+      'When life gives you lemons, make lemonade',
+      'Jeremy WIlliams',
+      'Mark',
+      10
+    );
    }
 
-  voteUp(): boolean{
-    this.votes += 1;
-    return false;
-  }
-  voteDown(): boolean{
-    this.votes -= 1;
-    return false;
-  }
+  // voteUp(): boolean{
+  //   this.votes += 1;
+  //   return false;
+  // }
+  // voteDown(): boolean{
+  //   this.votes -= 1;
+  //   return false;
+  // }
 
   ngOnInit() {
   }

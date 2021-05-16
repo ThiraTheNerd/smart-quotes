@@ -2,17 +2,17 @@
   <div class="row g-0" id="single-quote">
     <div class="col-md-4" id="points-statistics">
       <div class="value" id="value">
-        {{votes}}
+        {{quote.votes}}
       </div>
       <div class="label" id="points-label">
-        Points
+        Votes
       </div>
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+        <h5 class="card-title">{{quote.name}}</h5>
+        <p class="card-text">{{quote.quotename}}</p>
+        <footer class="blockquote-footer">This quote is by <cite title="Source Title">{{quote.author}}</cite></footer>
         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
         <div>
           <a href (click) = "voteUp()">
